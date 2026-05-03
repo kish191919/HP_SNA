@@ -658,12 +658,12 @@
     (function () {
       const toggle = document.getElementById('mobile-toggle');
       const menu = document.getElementById('mobile-menu');
-      if (!toggle || !menu) return;
+      const header = toggle && toggle.closest('header');
+      if (!toggle || !menu || !header) return;
 
       document.addEventListener('click', (e) => {
         if (!toggle.checked) return;
-        if (e.target.closest('label[for="mobile-toggle"]')) return;
-        if (menu.contains(e.target)) return;
+        if (header.contains(e.target)) return;
         toggle.checked = false;
       });
 
