@@ -48,6 +48,61 @@
     .carousel-dot { width: 8px; height: 8px; border-radius: 9999px; background: rgba(26,58,108,.25); transition: all .25s ease; cursor: pointer; border: 0; padding: 0; }
     .carousel-dot.is-active { background: #1a3a6c; width: 24px; }
     .carousel-arrow:disabled { opacity: .35; pointer-events: none; }
+
+    /* Hero background slideshow (Ken Burns crossfade) */
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      opacity: 0;
+      animation: heroKenBurns 18s ease-in-out infinite;
+      will-change: opacity, transform;
+    }
+    .hero-slide:nth-child(1) { animation-delay: -1s;  transform-origin: center center; }
+    .hero-slide:nth-child(2) { animation-delay: 5s;   transform-origin: top right; }
+    .hero-slide:nth-child(3) { animation-delay: 11s;  transform-origin: bottom left; }
+    @keyframes heroKenBurns {
+      0%   { opacity: 0; transform: scale(1.05); }
+      5.5% { opacity: 1; }
+      33%  { opacity: 1; transform: scale(1.15); }
+      39%  { opacity: 0; transform: scale(1.17); }
+      100% { opacity: 0; transform: scale(1.17); }
+    }
+
+    /* Staggered hero text entrance */
+    .hero-fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .hero-fade-up.d-1 { animation-delay: 0.15s; }
+    .hero-fade-up.d-2 { animation-delay: 0.35s; }
+    .hero-fade-up.d-3 { animation-delay: 0.60s; }
+    .hero-fade-up.d-4 { animation-delay: 0.85s; }
+    @keyframes heroFadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scroll-down indicator */
+    .hero-scroll-dot { animation: heroScrollDot 1.9s ease-in-out infinite; }
+    @keyframes heroScrollDot {
+      0%   { transform: translateY(0);    opacity: 0; }
+      25%  { opacity: 1; }
+      80%  { transform: translateY(14px); opacity: 0; }
+      100% { transform: translateY(14px); opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-slide,
+      .hero-fade-up,
+      .hero-scroll-dot { animation: none !important; }
+      .hero-slide { opacity: 1; transform: none; }
+      .hero-slide:not(:first-child) { display: none; }
+      .hero-fade-up { opacity: 1; transform: none; }
+    }
   </style>
 </head>
 <body class="bg-white antialiased">
@@ -98,24 +153,24 @@
 
   <!-- ============ HERO ============ -->
   <section id="top" class="relative isolate flex items-center min-h-[calc(100vh-5rem)] min-h-[calc(100svh-5rem)]">
-    <div class="absolute inset-0 -z-10">
-      <img src="assets/images/0.jpeg"
-           alt="SNA cleaning crew at a bright office"
-           class="w-full h-full object-cover object-[center_30%]" />
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <img src="assets/images/0.jpeg" alt="SNA cleaning crew at a bright office" class="hero-slide" />
+      <img src="assets/images/1.png" alt="Warehouse staffing operation" class="hero-slide" />
+      <img src="assets/images/2.png" alt="Window cleaning service" class="hero-slide" />
       <div class="absolute inset-0 bg-gradient-to-r from-navy-dark/85 via-navy/75 to-navy/40"></div>
     </div>
 
     <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
       <div class="max-w-3xl text-white">
-        <p class="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-beige mb-5">Atlanta, Georgia</p>
-        <h1 class="font-display text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] mb-6 uppercase tracking-tight [text-wrap:balance]">
+        <p class="hero-fade-up d-1 text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-beige mb-5">Atlanta, Georgia</p>
+        <h1 class="hero-fade-up d-2 font-display text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] mb-6 uppercase tracking-tight [text-wrap:balance]">
           Staffing &amp;
           <span class="block text-beige">Janitorial Service</span>
         </h1>
-        <p class="text-lg text-gray-100 leading-relaxed mb-8 max-w-2xl">
+        <p class="hero-fade-up d-3 text-lg text-gray-100 leading-relaxed mb-8 max-w-2xl">
           조지아주 애틀랜타에서 15년, 100여 곳에 서비스를 제공해온 신뢰받는 파트너 SNA.
         </p>
-        <div class="flex flex-wrap gap-4">
+        <div class="hero-fade-up d-4 flex flex-wrap gap-4">
           <a href="#contact" class="inline-flex items-center bg-white text-navy font-semibold px-7 py-3.5 rounded-md hover:bg-beige transition">
             Contact Us
           </a>
@@ -125,6 +180,14 @@
         </div>
       </div>
     </div>
+
+    <a href="#about" aria-label="Scroll to About section"
+       class="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/70 hover:text-white transition">
+      <span class="text-[10px] font-semibold uppercase tracking-[0.3em]">Scroll</span>
+      <span class="w-6 h-10 rounded-full border-2 border-white/60 flex items-start justify-center pt-2">
+        <span class="block w-1 h-2 bg-white rounded-full hero-scroll-dot"></span>
+      </span>
+    </a>
   </section>
 
   <!-- ============ ABOUT ============ -->
