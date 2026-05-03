@@ -38,9 +38,8 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: #1f2937; }
     .font-display { font-family: 'Titillium Web', 'Inter', sans-serif; }
-    /* Mobile menu (CSS-only) */
+    /* Mobile menu */
     #mobile-toggle:checked ~ #mobile-menu { display: block; }
-    #mobile-toggle:checked ~ #mobile-backdrop { display: block; }
     :lang(ko), .kr { word-break: keep-all; overflow-wrap: break-word; }
     /* Carousel (mobile/tablet only — at lg+ container reverts to grid) */
     .carousel-track::-webkit-scrollbar { display: none; }
@@ -135,9 +134,6 @@
         </svg>
       </label>
     </div>
-
-    <!-- Mobile menu backdrop (closes menu on outside tap) -->
-    <label for="mobile-toggle" id="mobile-backdrop" class="hidden md:hidden fixed inset-0 cursor-pointer" aria-hidden="true"></label>
 
     <!-- Mobile menu -->
     <div id="mobile-menu" class="relative hidden md:hidden border-t border-gray-200 bg-white">
@@ -655,6 +651,28 @@
 
         update();
         window.addEventListener('resize', update);
+      });
+    })();
+
+    /* Mobile menu — close on outside tap, link tap, or Escape */
+    (function () {
+      const toggle = document.getElementById('mobile-toggle');
+      const menu = document.getElementById('mobile-menu');
+      if (!toggle || !menu) return;
+
+      document.addEventListener('click', (e) => {
+        if (!toggle.checked) return;
+        if (e.target.closest('label[for="mobile-toggle"]')) return;
+        if (menu.contains(e.target)) return;
+        toggle.checked = false;
+      });
+
+      menu.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => { toggle.checked = false; });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && toggle.checked) toggle.checked = false;
       });
     })();
   </script>
