@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 110" width="220" height="110">
+  <g transform="translate(110, 32)">
+    <circle cx="0" cy="-18" r="6" fill="#f5b945"/>
+    <circle cx="-22" cy="-10" r="6" fill="#e85d4a"/>
+    <circle cx="22" cy="-10" r="6" fill="#5fb85f"/>
+    <circle cx="-32" cy="10" r="6" fill="#d94c8a"/>
+    <circle cx="32" cy="10" r="6" fill="#3fb8c4"/>
+    <circle cx="-14" cy="20" r="6" fill="#7e57c2"/>
+    <circle cx="14" cy="20" r="6" fill="#4a7fc4"/>
+    <circle cx="0" cy="2" r="7" fill="#1a3a6c"/>
+  </g>
+  <text x="110" y="92" text-anchor="middle" font-family="'Titillium Web', 'Helvetica Neue', sans-serif" font-weight="700" font-size="34" fill="#1a3a6c" letter-spacing="2">SNA</text>
+</svg>

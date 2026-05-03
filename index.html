@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SNA Georgia — Cleaning, Staffing &amp; Sourcing Solutions in Atlanta</title>
+  <meta name="description" content="조지아주 애틀랜타 지역의 청소, 인력 파견, 구매 대행 전문 기업 SNA Georgia. 15년 이상의 경험으로 100개 이상의 위치에 신뢰할 수 있는 서비스를 제공합니다." />
+  <meta property="og:title" content="SNA Georgia — Trusted Partner in Cleaning, Staffing &amp; Sourcing" />
+  <meta property="og:description" content="Atlanta-based commercial cleaning, labor staffing, and supply sourcing solutions. 15+ years of experience, 100+ service locations." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="assets/sna-logo.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1a3a6c', dark: '#122a4f', light: '#2c5391' },
+            beige: { DEFAULT: '#f5f1e8', dark: '#ebe4d2' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            display: ['"Titillium Web"', 'Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #1f2937; }
+    .font-display { font-family: 'Titillium Web', 'Inter', sans-serif; }
+    /* Mobile menu (CSS-only) */
+    #mobile-toggle:checked ~ #mobile-menu { display: block; }
+    #mobile-toggle:checked ~ #mobile-backdrop { display: block; }
+    :lang(ko), .kr { word-break: keep-all; overflow-wrap: break-word; }
+    /* Carousel (mobile/tablet only — at lg+ container reverts to grid) */
+    .carousel-track::-webkit-scrollbar { display: none; }
+    .carousel-track { scrollbar-width: none; }
+    .carousel-dot { width: 8px; height: 8px; border-radius: 9999px; background: rgba(26,58,108,.25); transition: all .25s ease; cursor: pointer; border: 0; padding: 0; }
+    .carousel-dot.is-active { background: #1a3a6c; width: 24px; }
+    .carousel-arrow:disabled { opacity: .35; pointer-events: none; }
+  </style>
+</head>
+<body class="bg-white antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
+    <input type="checkbox" id="mobile-toggle" class="hidden peer" />
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <a href="#top" class="flex items-center gap-3">
+        <img src="assets/sna-logo.svg" alt="SNA Georgia" class="h-12 w-auto" />
+        <span class="font-display font-bold text-navy text-lg hidden sm:inline">SNA Georgia</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700 ml-auto mr-8">
+        <a href="#about" class="hover:text-navy transition">About</a>
+        <a href="#services" class="hover:text-navy transition">Services</a>
+        <a href="#sourcing" class="hover:text-navy transition">Sourcing</a>
+        <a href="#contact" class="hover:text-navy transition">Contact</a>
+      </nav>
+
+      <a href="#contact" class="hidden md:inline-flex items-center bg-navy hover:bg-navy-dark text-white text-sm font-semibold px-5 py-2.5 rounded-md transition">
+        Get a Quote
+      </a>
+
+      <!-- Mobile toggle -->
+      <label for="mobile-toggle" class="md:hidden cursor-pointer p-2" aria-label="Toggle menu">
+        <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+    </div>
+
+    <!-- Mobile menu backdrop (closes menu on outside tap) -->
+    <label for="mobile-toggle" id="mobile-backdrop" class="hidden md:hidden fixed inset-0 cursor-default" aria-hidden="true"></label>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="relative hidden md:hidden border-t border-gray-200 bg-white">
+      <nav class="px-4 py-4 flex flex-col gap-3 text-sm font-medium text-gray-700">
+        <a href="#about" class="hover:text-navy py-2">About</a>
+        <a href="#services" class="hover:text-navy py-2">Services</a>
+        <a href="#sourcing" class="hover:text-navy py-2">Sourcing</a>
+        <a href="#contact" class="hover:text-navy py-2">Contact</a>
+        <a href="#contact" class="bg-navy text-white text-center font-semibold px-5 py-2.5 rounded-md mt-2">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section id="top" class="relative isolate flex items-center min-h-[calc(100vh-5rem)] min-h-[calc(100svh-5rem)]">
+    <div class="absolute inset-0 -z-10">
+      <img src="assets/images/0.jpeg"
+           alt="SNA cleaning crew at a bright office"
+           class="w-full h-full object-cover object-[center_30%]" />
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-dark/85 via-navy/75 to-navy/40"></div>
+    </div>
+
+    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <div class="max-w-3xl text-white">
+        <p class="text-xs sm:text-sm font-semibold uppercase tracking-[0.3em] text-beige mb-5">Atlanta, Georgia</p>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] mb-6 uppercase tracking-tight [text-wrap:balance]">
+          Staffing &amp;
+          <span class="block text-beige">Janitorial Service</span>
+        </h1>
+        <p class="text-lg text-gray-100 leading-relaxed mb-8 max-w-2xl">
+          조지아주 애틀랜타에서 15년, 100여 곳에 서비스를 제공해온 신뢰받는 파트너 SNA.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="inline-flex items-center bg-white text-navy font-semibold px-7 py-3.5 rounded-md hover:bg-beige transition">
+            Contact Us
+          </a>
+          <a href="#services" class="inline-flex items-center border-2 border-white/80 text-white font-semibold px-7 py-3.5 rounded-md hover:bg-white/10 transition">
+            View Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-widest text-navy mb-3">About SNA Georgia</p>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-dark leading-tight mb-6">
+            How Can We Help You
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-5">
+            SNA는 조지아주 애틀랜타 지역 및 근교에서 기업건물 청소 및 청소에 관한 모든
+            서비스를 제공하고 있습니다. 저희는 의료시설 사무실 및 병원, 학교 건물 등의
+            청소와 공사 후 청소 등에 이르기까지 다양한 상업 시설 청소 분야에서
+            <strong class="text-navy">15년 이상 경력</strong>을 쌓아온 저희에게는
+            처리하기에 너무 크거나 너무 작은 일이란 없습니다.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            <strong class="text-navy">100개 이상의 위치</strong>에 다양한 서비스를 제공한
+            실적을 바탕으로 고객의 기대를 뛰어넘는 탁월한 서비스를 제공하기 위해 최선을
+            다하고 있습니다. 고객 서비스에 대한 저희 SNA의 헌신과 높은 기준을 직접
+            확인하세요.
+          </p>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-4 sm:gap-6 border-t border-gray-200 pt-8">
+            <div>
+              <p class="font-display text-3xl sm:text-4xl font-bold text-navy">15+</p>
+              <p class="text-xs sm:text-sm text-gray-500 mt-1">Years Experience</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl sm:text-4xl font-bold text-navy">100+</p>
+              <p class="text-xs sm:text-sm text-gray-500 mt-1">Service Locations</p>
+            </div>
+            <div>
+              <p class="font-display text-3xl sm:text-4xl font-bold text-navy">Atlanta</p>
+              <p class="text-xs sm:text-sm text-gray-500 mt-1">GA Service Area</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collage: 1 large + 2 small -->
+        <div class="grid grid-cols-[1.6fr_1fr] grid-rows-2 gap-3 sm:gap-4">
+          <img src="assets/images/1.png" alt="Warehouse Staffing" class="rounded-lg w-full h-full object-cover row-span-2" />
+          <img src="assets/images/2.png" alt="Window Cleaning" class="rounded-lg w-full h-full object-cover" />
+          <img src="assets/images/4.png" alt="Pressure Washing" class="rounded-lg w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="py-20 lg:py-28 bg-beige">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-sm font-semibold uppercase tracking-widest text-navy mb-3">What We Offer</p>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-dark mb-4">
+          Comprehensive Service Solutions
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          청소부터 인력 파견, 구매 대행까지 — 비즈니스 운영에 필요한 모든 것을 한 곳에서
+          제공합니다.
+        </p>
+      </div>
+
+      <div class="relative" data-carousel>
+        <div class="carousel-track flex overflow-x-auto snap-x snap-mandatory scroll-smooth gap-4 pb-4 px-[7.5%] sm:px-[22.5%] lg:grid lg:grid-cols-4 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
+
+        <!-- Card 1 -->
+        <article class="snap-center shrink-0 w-full lg:w-auto bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80&auto=format&fit=crop" alt="General commercial cleaning" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-lg bg-navy/10 text-navy flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-dark mb-2">General Commercial Cleaning</h3>
+            <p class="text-xs text-gray-500 mb-4">일반 상업 청소</p>
+            <ul class="space-y-1.5 text-sm text-gray-700">
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Office Cleaning</li>
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Hospital Cleaning</li>
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Factory Cleaning</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="snap-center shrink-0 w-full lg:w-auto bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/images/2.png" alt="Window cleaners on a high-rise building" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-lg bg-navy/10 text-navy flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-dark mb-2">Specialized Cleaning</h3>
+            <p class="text-xs text-gray-500 mb-4">특수 청소 서비스</p>
+            <ul class="space-y-1.5 text-sm text-gray-700">
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Window Cleaning</li>
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Pressure Washing</li>
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Commercial Floor Care</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="snap-center shrink-0 w-full lg:w-auto bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/images/1.png" alt="Warehouse forklift operator" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-lg bg-navy/10 text-navy flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-dark mb-2">Labor Staffing</h3>
+            <p class="text-xs text-gray-500 mb-4">인력 파견</p>
+            <ul class="space-y-1.5 text-sm text-gray-700">
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Warehouse Staffing</li>
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Construction Labor</li>
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Manufacturing Staffing</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="snap-center shrink-0 w-full lg:w-auto bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/images/9.png" alt="Shipping port with containers and logistics equipment" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-6">
+            <div class="w-10 h-10 rounded-lg bg-navy/10 text-navy flex items-center justify-center mb-4">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-dark mb-2">Supply Sourcing</h3>
+            <p class="text-xs text-gray-500 mb-4">구매 대행</p>
+            <ul class="space-y-1.5 text-sm text-gray-700">
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Construction Equipment</li>
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Sanitary &amp; Cleaning Products</li>
+              <li class="flex items-start"><span class="text-navy mr-2">›</span>Office &amp; Facility Essentials</li>
+            </ul>
+          </div>
+        </article>
+
+        </div>
+
+        <!-- Carousel controls (mobile/tablet only) -->
+        <button type="button" aria-label="Previous slide" class="carousel-arrow carousel-prev lg:hidden absolute top-1/2 left-2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md text-navy flex items-center justify-center hover:bg-white transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+        <button type="button" aria-label="Next slide" class="carousel-arrow carousel-next lg:hidden absolute top-1/2 right-2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 shadow-md text-navy flex items-center justify-center hover:bg-white transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+        <div class="carousel-dots lg:hidden flex justify-center gap-2 mt-4" aria-label="Slide pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOURCING SPOTLIGHT ============ -->
+  <section id="sourcing" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-widest text-navy mb-3">SNA Georgia Sourcing</p>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-dark leading-tight mb-6">
+            What Can We Get For You
+          </h2>
+          <p class="text-gray-600 leading-relaxed mb-5">
+            SNA는 구매 대행 분야에서도 뛰어난 서비스를 제공하고 있습니다. 저희는
+            <strong class="text-navy">원자재부터 장비, 사무용품</strong>, 그리고 다른
+            비즈니스 운영을 위한 모든 물품에 이르기까지 다양한 분야에서 구매 대행
+            경험을 쌓아왔습니다. 고객이 필요로 하는 모든 것을 믿고 맡겨주세요.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            저희는 고객의 비즈니스 성장을 지원하기 위해 최선을 다하며,
+            <strong class="text-navy">효율적이고 경제적인 구매 솔루션</strong>을
+            제공하겠습니다. SNA의 구매 대행 서비스는 고객의 요구 사항을 충족시키고,
+            높은 기준을 유지하기 위해 헌신하고 있습니다. 저희의 전문성과 뛰어난
+            서비스를 직접 경험해보세요.
+          </p>
+        </div>
+
+        <!-- 4 category collage -->
+        <div class="grid grid-cols-2 gap-3 sm:gap-4">
+          <div>
+            <div class="aspect-square overflow-hidden rounded-lg">
+              <img src="assets/images/5.png" alt="Construction materials" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+            </div>
+            <div class="p-3 text-center">
+              <p class="font-semibold text-navy text-sm">Construction Materials</p>
+              <p class="text-xs text-gray-500 mt-1">건설 자재</p>
+            </div>
+          </div>
+          <div>
+            <div class="aspect-square overflow-hidden rounded-lg">
+              <img src="assets/images/6.png" alt="Tools and equipment" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+            </div>
+            <div class="p-3 text-center">
+              <p class="font-semibold text-navy text-sm">Tools &amp; Equipment</p>
+              <p class="text-xs text-gray-500 mt-1">공구 및 장비</p>
+            </div>
+          </div>
+          <div>
+            <div class="aspect-square overflow-hidden rounded-lg">
+              <img src="assets/images/7.jpg" alt="Packaging boxes" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+            </div>
+            <div class="p-3 text-center">
+              <p class="font-semibold text-navy text-sm">Packaging</p>
+              <p class="text-xs text-gray-500 mt-1">포장재</p>
+            </div>
+          </div>
+          <div>
+            <div class="aspect-square overflow-hidden rounded-lg">
+              <img src="assets/images/8.png" alt="Safety equipment" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
+            </div>
+            <div class="p-3 text-center">
+              <p class="font-semibold text-navy text-sm">Safety Equipment</p>
+              <p class="text-xs text-gray-500 mt-1">안전 장비</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST / WHY CHOOSE US ============ -->
+  <section class="bg-navy-dark text-white py-20 lg:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <svg class="w-12 h-12 mx-auto mb-6 text-beige opacity-80" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+      <p class="font-display text-lg sm:text-2xl lg:text-3xl leading-relaxed font-light text-left sm:text-center [text-wrap:pretty] max-w-prose mx-auto">
+        We are committed to <span class="font-bold text-beige whitespace-nowrap">exceeding your expectations</span>.
+        Let SNA Georgia be your trusted partner for top-quality cleaning and staffing solutions.
+        Contact us today to experience unmatched service and reliability.
+      </p>
+      <p class="mt-4 font-display text-lg sm:text-2xl lg:text-3xl text-beige font-semibold text-center">
+        Your satisfaction is our priority.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="py-20 lg:py-28 bg-beige">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <p class="text-sm font-semibold uppercase tracking-widest text-navy mb-3">Get In Touch</p>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-dark mb-4">
+          Let's Work Together
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          귀하의 비즈니스에 맞는 맞춤형 솔루션을 제안해드리겠습니다. 언제든지 문의해
+          주세요.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
+
+        <!-- Contact info -->
+        <div>
+          <h3 class="font-display font-bold text-2xl text-navy-dark mb-6">Contact Information</h3>
+
+          <ul class="space-y-5">
+            <li class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-lg bg-navy text-white flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-navy-dark">Address</p>
+                <p class="text-gray-600 text-sm mt-1">Atlanta, Georgia, USA</p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-lg bg-navy text-white flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-navy-dark">Phone</p>
+                <p class="text-gray-600 text-sm mt-1">+1 (XXX) XXX-XXXX</p>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-lg bg-navy text-white flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-navy-dark">Email</p>
+                <a href="mailto:info@snageorgia.com" class="text-gray-600 text-sm mt-1 hover:text-navy">info@snageorgia.com</a>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-lg bg-navy text-white flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+              </div>
+              <div>
+                <p class="font-semibold text-navy-dark">Website</p>
+                <p class="text-gray-600 text-sm mt-1">www.snageorgia.com</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="mt-10 p-6 bg-white rounded-lg border-l-4 border-navy">
+            <p class="text-sm text-gray-700 italic leading-relaxed">
+              "고객 서비스에 대한 저희 SNA의 헌신과 높은 기준을 직접 확인하세요."
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="bg-white rounded-2xl shadow-sm p-6 sm:p-8 lg:p-10">
+          <h3 class="font-display font-bold text-2xl text-navy-dark mb-6">Send Us a Message</h3>
+
+          <form action="mailto:info@snageorgia.com" method="post" enctype="text/plain" class="space-y-5">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Name <span class="text-red-500">*</span></label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy/40 focus:border-navy outline-none transition" />
+              </div>
+              <div>
+                <label for="company" class="block text-sm font-medium text-gray-700 mb-1.5">Company</label>
+                <input type="text" id="company" name="company" class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy/40 focus:border-navy outline-none transition" />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email <span class="text-red-500">*</span></label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy/40 focus:border-navy outline-none transition" />
+            </div>
+
+            <div>
+              <label for="service" class="block text-sm font-medium text-gray-700 mb-1.5">Service of Interest</label>
+              <select id="service" name="service" class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy/40 focus:border-navy outline-none transition bg-white">
+                <option value="">Select a service...</option>
+                <option value="general-cleaning">General Commercial Cleaning</option>
+                <option value="specialized-cleaning">Specialized Cleaning</option>
+                <option value="staffing">Labor Staffing</option>
+                <option value="sourcing">Supply Sourcing</option>
+                <option value="other">Other / Multiple</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1.5">Message <span class="text-red-500">*</span></label>
+              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy/40 focus:border-navy outline-none transition resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-navy hover:bg-navy-dark text-white font-semibold py-3.5 rounded-md transition flex items-center justify-center gap-2">
+              Send Message
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy-dark text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 mb-12">
+
+        <div class="col-span-2 lg:col-span-2 pb-8 border-b border-white/10 lg:pb-0 lg:border-b-0">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-white p-1.5 rounded">
+              <img src="assets/sna-logo.svg" alt="SNA Georgia" class="h-10 w-auto" />
+            </div>
+            <span class="font-display font-bold text-white text-lg">SNA Georgia</span>
+          </div>
+          <p class="text-sm leading-relaxed text-gray-400 max-w-md">
+            조지아주 애틀랜타 지역의 청소, 인력 파견, 구매 대행 전문 기업.
+            15년 이상의 경험으로 신뢰할 수 있는 종합 비즈니스 솔루션을 제공합니다.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-display font-semibold text-white mb-4 text-sm uppercase tracking-wider">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#about" class="hover:text-white transition">About</a></li>
+            <li><a href="#services" class="hover:text-white transition">Services</a></li>
+            <li><a href="#sourcing" class="hover:text-white transition">Sourcing</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-semibold text-white mb-4 text-sm uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li>Commercial Cleaning</li>
+            <li>Specialized Cleaning</li>
+            <li>Labor Staffing</li>
+            <li>Supply Sourcing</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <p>© 2026 SNA Georgia. All rights reserved.</p>
+        <p>Atlanta, Georgia · www.snageorgia.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const carousels = document.querySelectorAll('[data-carousel]');
+      carousels.forEach((root) => {
+        const track = root.querySelector('.carousel-track');
+        const prev = root.querySelector('.carousel-prev');
+        const next = root.querySelector('.carousel-next');
+        const dotsBox = root.querySelector('.carousel-dots');
+        if (!track || !dotsBox) return;
+
+        const slides = Array.from(track.children);
+        if (slides.length === 0) return;
+
+        const scrollToSlide = (i) => {
+          const slide = slides[i];
+          const slideLeftInTrack = slide.offsetLeft - track.offsetLeft;
+          const target = slideLeftInTrack - (track.clientWidth - slide.clientWidth) / 2;
+          track.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
+        };
+
+        slides.forEach((_, i) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'carousel-dot';
+          dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+          dot.addEventListener('click', () => scrollToSlide(i));
+          dotsBox.appendChild(dot);
+        });
+
+        const dots = Array.from(dotsBox.children);
+
+        const currentIndex = () => {
+          const center = track.scrollLeft + track.clientWidth / 2;
+          let best = 0;
+          let bestDist = Infinity;
+          slides.forEach((s, i) => {
+            const sCenter = s.offsetLeft - track.offsetLeft + s.clientWidth / 2;
+            const d = Math.abs(sCenter - center);
+            if (d < bestDist) { bestDist = d; best = i; }
+          });
+          return best;
+        };
+
+        const update = () => {
+          const i = currentIndex();
+          dots.forEach((d, idx) => d.classList.toggle('is-active', idx === i));
+          if (prev) prev.disabled = i === 0;
+          if (next) next.disabled = i === slides.length - 1;
+        };
+
+        let raf = 0;
+        track.addEventListener('scroll', () => {
+          if (raf) return;
+          raf = requestAnimationFrame(() => { raf = 0; update(); });
+        }, { passive: true });
+
+        if (prev) prev.addEventListener('click', () => scrollToSlide(Math.max(0, currentIndex() - 1)));
+        if (next) next.addEventListener('click', () => scrollToSlide(Math.min(slides.length - 1, currentIndex() + 1)));
+
+        update();
+        window.addEventListener('resize', update);
+      });
+    })();
+  </script>
+
+</body>
+</html>
